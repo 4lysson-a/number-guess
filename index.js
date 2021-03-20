@@ -2,6 +2,7 @@ let randomNumber = Math.floor(Math.random() * 100) + 1;
 console.log(randomNumber);
 const guesses = document.querySelector(".guesses");
 const lastResult = document.querySelector(".lastResult");
+const card = document.querySelector(".info");
 const lowOrHi = document.querySelector(".lowOrHi");
 
 const guessSubmit = document.querySelector(".guessSubmit");
@@ -12,14 +13,12 @@ let resetButton;
 
 function checkGuess() {
   let userGuess = Number(guessField.value);
-  if (guessCount === 1) {
-    guesses.textContent = "Previous guesses: ";
-  }
+
   guesses.textContent += userGuess + " ";
 
   if (userGuess === randomNumber) {
     lastResult.textContent = "Congratulations! You got it right!";
-    lastResult.style.backgroundColor = "green";
+    card.style.backgroundColor = "green";
     lowOrHi.textContent = "";
     setGameOver();
   } else if (guessCount === 10) {
@@ -27,7 +26,7 @@ function checkGuess() {
     setGameOver();
   } else {
     lastResult.textContent = "Wrong!";
-    lastResult.style.backgroundColor = "red";
+    card.style.backgroundColor = "red";
     if (userGuess < randomNumber) {
       lowOrHi.textContent = "Last guess was too low!";
     } else if (userGuess > randomNumber) {
@@ -68,7 +67,6 @@ function setGameOver() {
   resetButton.textContent = "Start new Game";
   resetButton.className = "resetButton";
   document.body.append(resetButton);
-
 
   resetButton.addEventListener("click", resetGame);
 }
