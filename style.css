@@ -86,7 +86,21 @@ button:hover {
   color: #000;
 }
 
-.info{
+.resetButton {
+  position: absolute;
+  top: 59%;
+  width: 29%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.resetButton:hover {
+  transform:translate(-50%, -50%);
+  background: #fff;
+  color: #000;
+}
+
+.info {
   transition: 0.4s;
   border-radius: 10px;
   padding: 10px;
@@ -100,9 +114,9 @@ button:hover {
   color: #fff;
   font-weight: bold;
   font-size: 1.1rem;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
 }
 
-.resetButton{
+.resetButton {
   background: #000;
 }
