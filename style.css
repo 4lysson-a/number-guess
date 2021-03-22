@@ -174,7 +174,8 @@ button:hover {
   font-family: "ubuntu";
 }
 
-.myGithub {
+a .myGithub {
+  text-decoration: none;
   width: 60px;
   height: 60px;
   position: absolute;
@@ -186,6 +187,6 @@ button:hover {
   transition: 0.2s;
 }
 
-.myGithub:hover {
+a .myGithub:hover {
   filter: invert(1);
 }
