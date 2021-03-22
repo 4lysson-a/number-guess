@@ -190,3 +190,19 @@ a .myGithub {
 a .myGithub:hover {
   filter: invert(1);
 }
+
+.language {
+  color: rgb(15, 15, 15);
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  margin-right: 30px;
+  text-decoration: none;
+  font-family: "Ubuntu";
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.language:hover {
+  color: #000;
+}
