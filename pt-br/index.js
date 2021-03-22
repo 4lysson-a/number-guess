@@ -23,7 +23,7 @@ function checkGuess() {
   if (userGuess === randomNumber) {
     lastResult.textContent = "Parabéns, você é bom !!";
     card.style.backgroundColor = "green";
-    lowOrHi.textContent = "";
+    lowOrHi.textContent = randomNumber;
     setGameOver();
   } else if (guessCount === 10) {
     lastResult.textContent = "!!! Fim de jogo :( !!!";
