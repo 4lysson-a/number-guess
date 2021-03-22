@@ -69,7 +69,7 @@ button {
   padding: 15px;
   border-radius: 7px;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  animation: gradient 15s ease infinite reverse;
+  animation: gradient 20s ease infinite reverse;
   background-size: 400% 400%;
   color: #fff;
   font-weight: bolder;
@@ -87,15 +87,16 @@ button:hover {
 }
 
 .resetButton {
-  position: absolute;
-  top: 59%;
-  width: 29%;
-  left: 50%;
+  position: absolute;  
+  width: 200px;
+  height: 60px;
+  right: 0px;
+  bottom: 0;
   transform: translate(-50%, -50%);
 }
 
 .resetButton:hover {
-  transform:translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background: #fff;
   color: #000;
 }
@@ -103,7 +104,7 @@ button:hover {
 .info {
   transition: 0.4s;
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
   background: #fff;
   left: 50%;
   transform: translateX(-50%);
@@ -115,8 +116,60 @@ button:hover {
   font-weight: bold;
   font-size: 1.1rem;
   font-family: "Ubuntu";
+  min-width: 200px;
+}
+
+.lastResult {
+  margin: 0px;
+}
+
+.lowOrHi {
+  font-size: 2rem;
+  position: relative;
+  margin: 0px;
+  margin-top: 10px;
 }
 
 .resetButton {
   background: #000;
+}
+
+.points {
+  font-size: 7rem;
+  font-family: "Ubuntu";
+  font-weight: bolder;
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.pointsContainer {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: gradient 20s ease infinite reverse;
+  background-size: 400% 400%;
+  padding: 15px;
+  position: absolute;
+  left: 2%;
+  /* background: #fff; */
+  width: 100%;
+  height: 100%;
+  max-height: 15vw;
+  max-width: 15vw;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.178);
+  color: #fff;
+}
+
+.guesses {
+  font-family: "ubuntu";
+  margin-left: 3vw;
+  margin-right: 3vw;
+  border-radius: 10px;
+}
+
+.pointsText {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  font-family: "ubuntu";
 }
