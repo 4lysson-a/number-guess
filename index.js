@@ -14,6 +14,8 @@ let guessCount = 1;
 let resetButton;
 let userPoints = 100;
 
+guessField.focus();
+
 function checkGuess() {
   let userGuess = Number(guessField.value);
   guesses.textContent += userGuess + " ";
@@ -77,3 +79,9 @@ function setGameOver() {
 }
 
 guessSubmit.addEventListener("click", checkGuess);
+
+guessField.addEventListener("keyup", (event) => {
+  if (event.code === "Enter") {
+    checkGuess();
+  }
+});
