@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Advinhe o número</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script async src="./index.js"></script>
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="icon" type="image/png" href="./assets/icon.svg" />
+  </head>
+  <body>
+    <section class="all">
+      <section class="titleContainer">
+        <h1 class="title">Advinhe o número</h1>
+        <p class="subTitle">
+          Selecionamos um número aleatório entre 1 - 100 <br />
+          Veja se você consegue advinhar qual número é e manter os seus pontos
+          <br />
+          Eu vou te dizer se o número esta acima ou abaixo do escolhido
+        </p>
+      </section>
+
+      <section id="div1" class="inputContainer">
+        <input class="guessField" type="text" placeholder="Chuta aqui" />
+        <br />
+        <button type="submit" class="guessSubmit">Enviar</button>
+      </section>
+
+      <section class="pointsContainer">
+        <p class="pointsText">Pontos</p>
+        <p class="points">100</p>
+        <p class="guesses"></p>
+      </section>
+
+      <section class="info">
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+      </section>
+
+      <a target="__blank" href="https://github.com/4ly-a">
+        <img
+          class="myGithub"
+          src="https://image.flaticon.com/icons/png/512/25/25231.png"
+          alt="My github"
+        />
+      </a>
+    </section>
+  </body>
+</html>
