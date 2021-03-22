@@ -87,7 +87,7 @@ button:hover {
 }
 
 .resetButton {
-  position: absolute;  
+  position: absolute;
   width: 200px;
   height: 60px;
   right: 0px;
@@ -174,8 +174,18 @@ button:hover {
   font-family: "ubuntu";
 }
 
+.myGithub {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 25px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.2s;
+}
 
-.myGithub{
-  width: 10px;
-  height: 10px;
+.myGithub:hover {
+  filter: invert(1);
 }
