@@ -26,7 +26,7 @@ body {
 }
 
 .titleContainer {
-  margin-top: -4%;
+  margin-top: -1%;
   text-align: center;
 }
 
@@ -42,6 +42,7 @@ body {
   color: #fff;
   font-family: "Ubuntu";
   font-weight: 200;
+  margin-bottom: 2%;
 }
 
 .inputContainer {
