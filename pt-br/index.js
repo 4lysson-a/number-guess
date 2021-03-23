@@ -4,6 +4,7 @@ const guesses = document.querySelector(".guesses");
 const points = document.querySelector(".points");
 
 const card = document.querySelector(".info");
+card.style.opacity = "0";
 const lastResult = document.querySelector(".lastResult");
 const lowOrHi = document.querySelector(".lowOrHi");
 
@@ -19,7 +20,7 @@ guessField.focus();
 function checkGuess() {
   let userGuess = Number(guessField.value);
   guesses.textContent += userGuess + " ";
-
+  card.style.opacity = "1";
   if (userGuess === randomNumber) {
     lastResult.textContent = "Parabéns, você é bom !!";
     card.style.backgroundColor = "green";
