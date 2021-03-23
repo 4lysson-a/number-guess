@@ -85,6 +85,7 @@ function setGameOver() {
   resetButton.className = "resetButton";
   document.body.append(resetButton);
   resetButton.addEventListener("click", resetGame);
+  resetButton.style.opacity = "0";
   setTimeout(() => {
     resetButton.style.opacity = "1";
   }, 1000);
