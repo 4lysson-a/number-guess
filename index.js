@@ -27,14 +27,14 @@ function checkGuess() {
     lastResult.textContent = "Congratulations! You got it right!";
     card.style.backgroundColor = "green";
     lowOrHi.textContent = randomNumber;
-    setGameOver();
+    setGameOver(5000);
     setTimeout(() => {
       card.style.opacity = "0";
     }, 5000);
   } else if (guessCount === 10) {
     lastResult.textContent = "!!! GAME OVER !!!";
     userPoints -= 10;
-    setGameOver();
+    setGameOver(1000);
     setTimeout(() => {
       card.style.opacity = "0";
     }, 1000);
@@ -77,7 +77,7 @@ function resetGame() {
   console.log(randomNumber);
 }
 
-function setGameOver() {
+function setGameOver(x) {
   guessField.disabled = true;
   guessSubmit.disabled = true;
   resetButton = document.createElement("button");
@@ -88,7 +88,7 @@ function setGameOver() {
   resetButton.style.opacity = "0";
   setTimeout(() => {
     resetButton.style.opacity = "1";
-  }, 1000);
+  }, x);
 }
 
 guessSubmit.addEventListener("click", checkGuess);
