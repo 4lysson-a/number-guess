@@ -91,9 +91,9 @@ button:hover {
   width: 200px;
   height: 60px;
   right: 0px;
-  
+  transition: 0.5s;
   bottom: 0;
-  left: 20%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
