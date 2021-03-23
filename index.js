@@ -5,6 +5,8 @@ const points = document.querySelector(".points");
 
 const lastResult = document.querySelector(".lastResult");
 const card = document.querySelector(".info");
+card.style.opacity = "0";
+
 const lowOrHi = document.querySelector(".lowOrHi");
 
 const guessSubmit = document.querySelector(".guessSubmit");
@@ -19,16 +21,23 @@ guessField.focus();
 function checkGuess() {
   let userGuess = Number(guessField.value);
   guesses.textContent += userGuess + " ";
+  card.style.opacity = "1";
 
   if (userGuess === randomNumber) {
     lastResult.textContent = "Congratulations! You got it right!";
     card.style.backgroundColor = "green";
     lowOrHi.textContent = randomNumber;
     setGameOver();
+    setTimeout(() => {
+      card.style.opacity = "0";
+    }, 1000);
   } else if (guessCount === 10) {
     lastResult.textContent = "!!! GAME OVER !!!";
     userPoints -= 10;
     setGameOver();
+    setTimeout(() => {
+      card.style.opacity = "0";
+    }, 1000);
   } else {
     userPoints -= 10;
     lastResult.textContent = "Wrong!";
