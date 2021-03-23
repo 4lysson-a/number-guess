@@ -28,7 +28,7 @@ function checkGuess() {
     setGameOver();
     setTimeout(() => {
       card.style.opacity = "0";
-    }, 1000);
+    }, 5000);
   } else if (guessCount === 10) {
     lastResult.textContent = "!!! Fim de jogo :( !!!";
     userPoints -= 10;
