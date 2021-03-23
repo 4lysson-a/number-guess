@@ -3,8 +3,8 @@ console.log(randomNumber);
 const guesses = document.querySelector(".guesses");
 const points = document.querySelector(".points");
 
-const lastResult = document.querySelector(".lastResult");
 const card = document.querySelector(".info");
+const lastResult = document.querySelector(".lastResult");
 const lowOrHi = document.querySelector(".lowOrHi");
 
 const guessSubmit = document.querySelector(".guessSubmit");
@@ -29,6 +29,9 @@ function checkGuess() {
     lastResult.textContent = "!!! Fim de jogo :( !!!";
     userPoints -= 10;
     setGameOver();
+    setTimeout(() => {
+      card.style.opacity = "0";
+    }, 1000);
   } else {
     userPoints -= 10;
     lastResult.textContent = "Errado!";
@@ -72,10 +75,14 @@ function setGameOver() {
   guessField.disabled = true;
   guessSubmit.disabled = true;
   resetButton = document.createElement("button");
+  resetButton.style.opacity = "0";
   resetButton.textContent = "Começar um novo jogo";
   resetButton.className = "resetButton";
   document.body.append(resetButton);
   resetButton.addEventListener("click", resetGame);
+  setTimeout(() => {
+    resetButton.style.opacity = "1";
+  }, 1000);
 }
 
 guessSubmit.addEventListener("click", checkGuess);
