@@ -79,11 +79,11 @@ function setGameOver() {
   guessField.disabled = true;
   guessSubmit.disabled = true;
   resetButton = document.createElement("button");
-  resetButton.style.opacity = "0";
   resetButton.textContent = "Começar um novo jogo";
   resetButton.className = "resetButton";
   document.body.append(resetButton);
   resetButton.addEventListener("click", resetGame);
+  resetButton.style.opacity = "0";
   setTimeout(() => {
     resetButton.style.opacity = "1";
   }, 1000);
