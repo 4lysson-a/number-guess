@@ -1,3 +1,29 @@
+import resetGame from "./ResetGame.js";
+import gameOver from "./GameOver.js";
+
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+console.log(randomNumber);
+const guesses = document.querySelector(".guesses");
+const points = document.querySelector(".points");
+
+const lastResult = document.querySelector(".lastResult");
+const card = document.querySelector(".info");
+card.style.opacity = "0";
+
+const lowOrHi = document.querySelector(".lowOrHi");
+
+const guessSubmit = document.querySelector(".guessSubmit");
+const guessField = document.querySelector(".guessField");
+
+let guessCount = 1;
+let resetButton;
+let userPoints = 100;
+
+guessField.focus();
+
+resetGame();
+gameOver();
+
 export default function checkGuess() {
   let userGuess = Number(guessField.value);
   guesses.textContent += userGuess + " ";
