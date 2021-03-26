@@ -1,3 +1,5 @@
+import checkGuess from "./js/CheckGuess.js";
+
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 console.log(randomNumber);
 const guesses = document.querySelector(".guesses");
